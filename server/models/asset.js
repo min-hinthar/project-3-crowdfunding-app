@@ -2,8 +2,8 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 
-const projectSchema = new Schema({
-   name: {
+const assetSchema = new Schema({
+   title: {
     type: String,
     required: true,
     unique: true,
@@ -15,7 +15,7 @@ const projectSchema = new Schema({
     unique: true,
     trim: true,
    },
-   pledgeGoal: {
+   price: {
     type: Number,
     required: true,
    },
@@ -23,16 +23,10 @@ const projectSchema = new Schema({
     type: Date,
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
-   },
-   assets: 
-   [
-    {
-        type: Schema.Types.ObjectId,
-        ref: 'Asset',
-    },
-],
+   }
+
 });
 
-const Project = model('Project', projectSchema);
+const Asset = model('Asset', assetSchema);
 
-module.exports = Project;
+module.exports = Asset;

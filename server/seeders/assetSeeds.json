@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Midnight Snow",
+        "description": "Oil painting of snowy midnight scene",
+        "price": 2500
+    },
+    {
+        "title": "Cherry Blossom",
+        "description": "Photograph of Cherry Blossom field",
+        "price": 6000
+    },
+    {
+        "title": "Colors of the Wind",
+        "description": "Poem written by Alan Smith",
+        "price": 2500
+    }
+]

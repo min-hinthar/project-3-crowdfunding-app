@@ -1,0 +1,53 @@
+[
+    {
+      "username": "Brian Swarmword",
+      "email": "bswarmword@testemail.com",
+      "password": "password01"
+    },
+    {
+      "username": "Alex Mac",
+      "email": "amac@testemail.com",
+      "password": "password02"
+    },
+    {
+      "username": "Smithers",
+      "email": "smithers@testemail.com",
+      "password": "password03"
+    },
+    {
+      "username": "Jane Doe",
+      "email": "jdoe@testemail.com",
+      "password": "password04"
+    },
+    {
+      "username": "Edward Cullen",
+      "email": "ecullen@testemail.com",
+      "password": "password05"
+    },
+    {
+      "username": "Alan Jou",
+      "email": "ajou@testemail.com",
+      "password": "password06"
+    },
+    {
+      "username": "DaenerysHOD",
+      "email": "dhod@testemail.com",
+      "password": "password07"
+    },
+    {
+      "username": "Aegon Targaryen",
+      "email": "atargaryen@testemail.com",
+      "password": "password08"
+    },
+    {
+      "username": "Donald Duck",
+      "email": "dduck@testemail.com",
+      "password": "password09"
+    },
+    {
+      "username": "Kimberly Knight",
+      "email": "knight@testemail.com",
+      "password": "password10"
+    }
+  ]
+  
