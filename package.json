@@ -7,11 +7,10 @@
     "test": "jest",
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "seed": "node seeds/seed.js",
+    "seed": "node /server/seeders/seed.js",
     "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i"
-
   },
   "repository": {
     "type": "git",
@@ -31,5 +30,8 @@
   "devDependencies": {
     "concurrently": "^7.4.0",
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
   }
 }
