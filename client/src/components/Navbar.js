@@ -1,21 +1,27 @@
-import React from 'react';
-import '../styles/Navbar.css';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import "../styles/Navbar.css";
+import { NavLink } from "react-router-dom";
 
 
 function Navbar() {
   return (
-    <div className="navbar">
-        <NavLink className="projectTitle" to="/">Crowdfunding</NavLink>
-        <ul>
-          <li>
-            <NavLink to="/login">Log In</NavLink>
-          </li>
-          <li>
-          <NavLink to="/signup">Sign up</NavLink>
-          </li>
-        </ul>
-    </div>
+				<div>
+					<div>
+						<NavLink to="/">
+							Crowdfunding
+						</NavLink>
+					</div>
+					<div>
+						<NavLink to="/login">
+							Login
+						</NavLink>
+					</div>
+					<div>
+						<NavLink to="/signup">
+							Signup
+						</NavLink>
+					</div>
+				</div>
   );
 }
 
