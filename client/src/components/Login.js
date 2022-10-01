@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { Form, Button, Alert } from 'react-bootstrap';
 import "../styles/Login.css";
+import Auth from "../utils/auth";
 
 function Login() {   
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  const [validated] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
   
     function validateForm() {  
       return email.length > 0 && password.length > 0;  
