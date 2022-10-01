@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "../styles/Login.css";
 
-
 function Login() {   
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -18,6 +17,9 @@ function Login() {
   
     return (  
       <div className="Login">  
+        <div>
+          <h1>Login to "Crowdfunding"</h1>
+        </div>
         <Form onSubmit={handleSubmit}>  
           <Form.Group size="lg" controlId="email">  
             <Form.Label>Email</Form.Label>  
