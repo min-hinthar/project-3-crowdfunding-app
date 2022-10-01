@@ -19,6 +19,10 @@ const projectSchema = new Schema({
     type: Number,
     required: true,
    },
+   projectManager: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+   },
    createdAt: {
     type: Date,
     default: Date.now,
