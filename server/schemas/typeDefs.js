@@ -6,6 +6,7 @@ const typeDefs = gql`
     name: String
     description: String
     pledgeGoal: Int
+    projectManager: User
     createdAt: String
     assets: [Asset]!
   }
@@ -22,6 +23,7 @@ const typeDefs = gql`
     title: String
     description: String
     price: Int
+    projectAssignment: Project
     createdAt: String
   }
   type Auth {
