@@ -19,6 +19,10 @@ const assetSchema = new Schema({
     type: Number,
     required: true,
    },
+   projectAssignment: {
+      type: Schema.Types.ObjectId,
+      ref: 'Project'
+   },
    createdAt: {
     type: Date,
     default: Date.now,
