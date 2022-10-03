@@ -1,0 +1,78 @@
+:root {
+  --bg-primary: #B6A19E;
+  --text-light: white;
+  --btn-color: #1bbc9b;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.container, .headerContainer {
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainHeader {
+  background-color: var(--bg-primary);
+  color: var(--text-light);
+  margin-bottom: 1.375rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerTitle {
+  color: var(--text-light);
+}
+
+.profileLink, .loginBtn {
+  text-align: center;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin: 0.625rem; 
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  outline: none;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  padding: 0.8rem 1.4rem;
+  background-color: var(--btn-color);
+  color: var(--text-light);
+}
+
+.logoutBtn, .signupBtn {
+  text-align: center;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin: 0.625rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  outline: none;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  padding: 0.8rem 1.4rem;
+  background-color: var(--btn-color);
+  color: #1a1a1a;
+
+}
