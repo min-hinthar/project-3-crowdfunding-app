@@ -6,53 +6,63 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
+      password
+      projects {
         _id
-        thoughtText
+        name
+        description
+        pledgeGoal
+        projectManager
+        createdAt
+        Assets {
+          _id
+          title
+          description
+          price
+          projectAssignment
+          createdAt
+        }
+      }
+    }
+  }
+`;
+
+export const QUERY_PROJECTS = gql`
+  query getProjects {
+    projects {
+      _id
+      name
+      description
+      pledgeGoal
+      projectManager
+      createdAt
+      assets {
+        _id
+        title
+        description
+        price
+        projectAssignment
         createdAt
       }
     }
   }
 `;
 
-export const QUERY_THOUGHTS = gql`
-  query getThoughts {
-    thoughts {
+export const QUERY_SINGLE_PROJECT = gql`
+  query getSingleProject($projectId: ID!) {
+    project(projectId: $projectId) {
       _id
-      thoughtText
-      thoughtAuthor
+      name
+      description
+      pledgeGoal
+      projectManager
       createdAt
-    }
-  }
-`;
-
-export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
+      assets {
         _id
-        commentText
-        commentAuthor
-        createdAt
-      }
-    }
-  }
-`;
-
-export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      username
-      email
-      thoughts {
-        _id
-        thoughtText
-        thoughtAuthor
+        title
+        description
+        price
+        projectAssignment
         createdAt
       }
     }
