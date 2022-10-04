@@ -20,7 +20,7 @@ const Header = () => {
           {Auth.loggedIn() ? (
             <>
               <Link className="profileLink" to="/me">
-                {Auth.getProfile().data.username}'s profile
+                {Auth.getProfile().data.email}'s profile
               </Link>
               <button className="logoutBtn" onClick={logout}>
                 Logout

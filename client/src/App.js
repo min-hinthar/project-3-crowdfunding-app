@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Dashboard from './components/Dashboard';
+import Profile from './components/Dashboard';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -56,11 +56,11 @@ function App() {
               />
               <Route 
                 path="/me"
-                element={<Dashboard />}
+                element={<Profile />}
               />
               <Route 
-                path="/Dashboards/:username"
-                element={<Dashboard />}
+                path="/Profiles/:email"
+                element={<Profile />}
               />
             </Routes>
           </div>

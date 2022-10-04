@@ -31,7 +31,7 @@ const resolvers = {
             console.log(project);
             await User.findOneAndUpdate(
                 { _id: context.user._id },
-                { $addToSet: { projects: project._id } }
+                { $addToSet: { project: project._id } }
             );
             return project;
         },
@@ -44,7 +44,7 @@ const resolvers = {
                     { _id: projectId },
                     {
                         $addToSet: {
-                            assets: { title, description, price, projectAssignment },
+                            asset: { title, description, price, projectAssignment },
                         },
                     },
                     {
@@ -61,7 +61,7 @@ const resolvers = {
                     { _id: projectId },
                     {
                         $pull: {
-                            assets: {
+                            asset: {
                                 _id: assetId,
                             },
                         },

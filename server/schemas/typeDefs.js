@@ -7,7 +7,7 @@ const typeDefs = gql`
     description: String
     pledgeGoal: Int
     projectManager: User
-    createdAt: String
+    createdAt: String 
     assets: [Asset]!
   }
   type User {

@@ -44,49 +44,46 @@ export const ADD_PROJECT = gql`
 `;
 
 export const REMOVE_PROJECT = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
+mutation removeProject($name: String!, $description: String!, $pledgeGoal: Int!, $createdAt: String!) {
+  removeProject(name: $name) {
+    _id
+    name
+    description
+    pledgeGoal
+    createdAt
+    assets {
       _id
-      thoughtText
-      thoughtAuthor
+      title
+      description
+      price
       createdAt
-      comments {
-        _id
-        commentText
-        createdAt
-      }
     }
   }
+}
 `;
 
 export const ADD_ASSET = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
+  mutation addAsset ($title: String!, $description: String!, $createdAt: String!) {
+    addAsset(title: $title, description: $description, price: $price, createdAt: $createdAt) {
       _id
-      thoughtText
-      thoughtAuthor
+      title
+      description
+      price
+      projectAssignment
       createdAt
-      comments {
-        _id
-        commentText
-        createdAt
-      }
     }
   }
 `;
 
 export const REMOVE_ASSET = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        createdAt
-      }
-    }
+mutation removeAsset($assetId: ID!) {
+  removeAsset(asset: $asset) {
+    _id
+    title
+    description
+    price
+    projectAssignment
+    createdAt
   }
+}
 `;
