@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Project } = require('../models');
+const { User, Project, Asset } = require('../models');
 const { signToken } = require('../utils/authenticate');
 
 const resolvers = {
@@ -26,26 +26,32 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addProject: async (parent, { name, description, pledgeGoal, projectManager }) => { //projectManager is never read -- add project is functioning - adding project to mongoDB but project manager is not rendered.
-            const project = await Project.create({ name, description, pledgeGoal, projectManager: User._id }); // mostly working except for projectManager.
+        addProject: async (parent, { name, description, pledgeGoal, projectManager }, context) => { //projectManager is never read -- add project is functioning - adding project to mongoDB but project manager is not rendered.
+            const project = await Project.create({ name, description, pledgeGoal, projectManager }); // mostly working except for projectManager.
             console.log(project);
-
+            const pUser = 
             await User.findOneAndUpdate( // HELP
-                { _id: context.User._id }, // check this out - context is not defined
-                { $addToSet: { project: project._id } }
+                { _id: projectManager }, // check this out - context is not defined
+                { $addToSet: { projects: project } },
+                {new: true}
             );
+            console.log(pUser)
             return project;
         },
         removeProject: async (parent, { projectId }) => {
+            // remove assets
+            await Asset.deleteMany({projectAssignment: projectId})
             return Project.findOneAndDelete({ _id: projectId });
         },
-        addAsset: async (parent, { projectId, title, description, price, projectAssignment }, context) => {
-            if (context.user) {
-                return Project.findOneAndUpdate(
-                    { _id: projectId },
+        addAsset: async (parent, { title, description, price, projectAssignment }, context) => {
+            //if (context.user) {
+                // add asset to a project
+                const asset = await Asset.create({ title, description, price, projectAssignment });
+                const project = await Project.findOneAndUpdate(
+                    { _id: projectAssignment },
                     {
                         $addToSet: {
-                            asset: { title, description, price, projectAssignment },
+                            assets: asset,
                         },
                     },
                     {
@@ -53,16 +59,19 @@ const resolvers = {
                         runValidators: true,
                     }
                 );
-            }
-            throw new AuthenticationError('You need to be logged in!');
+
+                return project;
+            //}
+            //throw new AuthenticationError('You need to be logged in!');
         },
         removeAsset: async (parent, { projectId, assetId }, context) => {
             if (context.User) {
-                return Thought.findOneAndUpdate(
+                await Asset.findOneAndDelete({_id: assetId})
+                return Project.findOneAndUpdate(
                     { _id: projectId },
                     {
                         $pull: {
-                            asset: {
+                            assets: {
                                 _id: assetId,
                             },
                         },
