@@ -29,6 +29,7 @@ const resolvers = {
         addProject: async (parent, { name, description, pledgeGoal, projectManager }) => { //projectManager is never read -- add project is functioning - adding project to mongoDB but project manager is not rendered.
             const project = await Project.create({ name, description, pledgeGoal, projectManager: User._id }); // mostly working except for projectManager.
             console.log(project);
+
             await User.findOneAndUpdate( // HELP
                 { _id: context.User._id }, // check this out - context is not defined
                 { $addToSet: { project: project._id } }
