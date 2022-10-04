@@ -15,6 +15,7 @@ db.once('open', async () => {
     for (let i = 0; i < projectSeeds.length; i++) {
       const { _id, name } = await Project.create(projectSeeds[i]);
       const user = await User.findOneAndUpdate(
+      //const asset -- finish code to add assets to assets array within each project
         { username: name },
         {
           $addToSet: {
