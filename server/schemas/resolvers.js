@@ -26,12 +26,12 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addProject: async (parent, { name, description, pledgeGoal, projectManager }) => {
-            const project = await Project.create({ name, description, pledgeGoal, $projectManager: projectManager._id });
+        addProject: async (parent, { name, description, pledgeGoal, projectManager }) => { //projectManager is never read -- add project is functioning - adding project to mongoDB but project manager is not rendered.
+            const project = await Project.create({ name, description, pledgeGoal, projectManager: User._id }); // mostly working except for projectManager.
             console.log(project);
-            await User.findOneAndUpdate(
-                { _id: context.user._id },
-                { $addToSet: { projects: project._id } }
+            await User.findOneAndUpdate( // HELP
+                { _id: context.User._id }, // check this out - context is not defined
+                { $addToSet: { project: project._id } }
             );
             return project;
         },
@@ -40,11 +40,11 @@ const resolvers = {
         },
         addAsset: async (parent, { projectId, title, description, price, projectAssignment }, context) => {
             if (context.user) {
-                return Prjoect.findOneAndUpdate(
+                return Project.findOneAndUpdate(
                     { _id: projectId },
                     {
                         $addToSet: {
-                            assets: { title, description, price, projectAssignment },
+                            asset: { title, description, price, projectAssignment },
                         },
                     },
                     {
@@ -56,12 +56,12 @@ const resolvers = {
             throw new AuthenticationError('You need to be logged in!');
         },
         removeAsset: async (parent, { projectId, assetId }, context) => {
-            if (context.user) {
+            if (context.User) {
                 return Thought.findOneAndUpdate(
                     { _id: projectId },
                     {
                         $pull: {
-                            assets: {
+                            asset: {
                                 _id: assetId,
                             },
                         },
