@@ -10,7 +10,8 @@ import Projects from '../components/Projects';
 
 
 const Profile = () => {
-  const { username: userParam } = useParams();
+  const { email: userParam } = useParams();
+  console.log(userParam);
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME);
 
   const user = data?.me || data?.user || {};

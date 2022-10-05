@@ -3,6 +3,17 @@ const { User, Project, Asset } = require('../models');
 const { signToken } = require('../utils/authenticate');
 
 const resolvers = {
+    Query:{
+        getUser: async (parent, {email}) => {
+            return User.findOne({email: email});
+        },        
+        getProjects: async (parent,{}) => {
+            return Project.find();
+        },
+        getSingleProject: async (parent, {projectId}) => {
+            return Project.findOne({_id: projectId});
+        }
+    },
     Mutation: {
         addUser: async (parent, { username, email, password }) => {
             const user = await User.create({ username, email, password });
