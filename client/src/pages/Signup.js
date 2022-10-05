@@ -51,14 +51,14 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                {/* <input
+                <input
                   className="form-input"
                   placeholder="Your username"
                   name="username"
                   type="text"
                   value={formState.name}
                   onChange={handleChange}
-                /> */}
+                />
                 <input
                   className="form-input"
                   placeholder="Your email"
