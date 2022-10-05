@@ -11,14 +11,13 @@ import Projects from '../components/Projects';
 
 const Profile = () => {
   const { username: userParam } = useParams();
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam },
-  });
+  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME);
 
   const user = data?.me || data?.user || {};
 
   // const users = data?.user || [];
-  console.log(user)
+  if (!loading)
+    console.log(data)
 
   if (loading) return null;
   // if (error) return `Error! ${error}`;
