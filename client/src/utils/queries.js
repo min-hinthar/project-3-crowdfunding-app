@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_USER = gql`
-  query user($username: String!) {
-    user(username: $username) {
+  query getUser($email: String!) {
+    getUser(email: $email) {
       _id
       username
       email
@@ -12,14 +12,18 @@ export const QUERY_USER = gql`
         name
         description
         pledgeGoal
-        projectManager
+        projectManager{
+          _id
+        }
         createdAt
-        Assets {
+        assets {
           _id
           title
           description
           price
-          projectAssignment
+          projectAssignment{
+            _id
+          }
           createdAt
         }
       }
@@ -29,19 +33,23 @@ export const QUERY_USER = gql`
 
 export const QUERY_PROJECTS = gql`
   query getProjects {
-    projects {
+    getProjects {
       _id
       name
       description
       pledgeGoal
-      projectManager
+      projectManager{
+        _id
+      }
       createdAt
       assets {
         _id
         title
         description
         price
-        projectAssignment
+        projectAssignment{
+          _id
+        }
         createdAt
       }
     }
@@ -50,19 +58,23 @@ export const QUERY_PROJECTS = gql`
 
 export const QUERY_SINGLE_PROJECT = gql`
   query getSingleProject($projectId: ID!) {
-    project(projectId: $projectId) {
+    getSingleProject(projectId: $projectId) {
       _id
       name
       description
       pledgeGoal
-      projectManager
+      projectManager{
+        _id
+      }
       createdAt
       assets {
         _id
         title
         description
         price
-        projectAssignment
+        projectAssignment{
+          _id
+        }
         createdAt
       }
     }
@@ -80,14 +92,18 @@ export const QUERY_ME = gql`
         name
         description
         pledgeGoal
-        projectManager
+        projectManager{
+          _id
+        }
         createdAt
-        Assets {
+        assets {
           _id
           title
           description
           price
-          projectAssignment
+          projectAssignment{
+            _id
+          }
           createdAt
         }
       }
