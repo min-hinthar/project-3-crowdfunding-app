@@ -17,7 +17,12 @@
     {
       "username": "Jane Doe",
       "email": "jdoe@testemail.com",
-      "password": "password04"
+      "password": "password04",
+      "projects": {
+        "name": "Project SkyWalk",
+        "description": "For purhcase of surveillance equipment",
+        "pledgeGoal": 2500
+      }
     },
     {
       "username": "Edward Cullen",

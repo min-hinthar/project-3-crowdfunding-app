@@ -68,3 +68,29 @@ export const QUERY_SINGLE_PROJECT = gql`
     }
   }
 `;
+
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      projects {
+        _id
+        name
+        description
+        pledgeGoal
+        projectManager
+        createdAt
+        Assets {
+          _id
+          title
+          description
+          price
+          projectAssignment
+          createdAt
+        }
+      }
+    }
+  }
+`;
