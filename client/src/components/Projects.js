@@ -1,36 +1,37 @@
 import React from 'react';
-import Auth from '../utils/auth';
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
 import { QUERY_PROJECTS } from '../utils/queries';
-
-
+import { useQuery } from '@apollo/client';
 
 
 const Projects = () => {
-//   const { username: userParam } = useParams();
   const { loading, data } = useQuery(QUERY_PROJECTS);
+  if (loading) return 'Loading...';
 
-  const projects = data?.projects || {};
+  console.log(data)
 
-  // const users = data?.user || [];
-  console.log(projects)
-
-  if (loading) return null;
-  // if (error) return `Error! ${error}`;
+  const projects = data?.getProjects || [];
 
   return (
     <div>
-      <div className="projectCard">
-        <div className="projectProfile">
-          <p>View All Projects: {projects?.name} </p>
-          <p>
-          </p>
+      <div>
+        <h3 className="text-primary">View All Projects</h3>
+        <div>
+          {projects.map(
+            (project) => {
+              return (
+                <li>
+                  {project.name}
+                </li>
+              );
+            }
+          )
+          }
         </div>
       </div>
-      
 
     </div>
-    );
-  };
-  export default Projects;
+  );
+
+}
+
+export default Projects;

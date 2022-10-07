@@ -1,23 +1,27 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
   return (
-    <footer className="">
-      <div className="">
-        {location.pathname !== '/' && (
-          <button
-            className=""
-            onClick={() => navigate(-1)}
-          >
-            &larr; Go Back
-          </button>
-        )}
-        <h4>
-          FOOTER
-        </h4>
+    <footer className="footerContainer">
+      <div className="mainFooter">
+        <div className="footerText">
+        <h4 className="studentName">Min Khant</h4>
+          <a className="gitHub" href="https://github.com/min-hinthar/">
+            GitHub Profile
+          </a>
+        </div>
+        <div className="footerText">
+        <h4 className="studentName">Elaine Liao</h4>
+        <a className="gitHub" href="https://github.com/ehliao/">
+            GitHub Profile
+          </a>
+        </div>
+        <div className="footerText">
+        <h4 className="studentName">Alexa Punzalan</h4>
+        <a className="gitHub" href="https://github.com/AlexaP2022/">
+            GitHub Profile
+          </a>
+        </div>
       </div>
     </footer>
   );
