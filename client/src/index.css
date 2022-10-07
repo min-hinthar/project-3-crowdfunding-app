@@ -5,7 +5,8 @@
   --bg-header: #cfebc1;
   --text-light: #69581a;
   --btn-color: white;
-  --bg-page: #fffdf4;
+  --bg-page: #f8f3dd;
+  --bg-other: #69581a9d;
 }
 
 .header {
@@ -127,4 +128,21 @@
 
 .summaryBox {
   margin-top: 6%;
+}
+
+.loginHeader {
+  padding: 0.375rem;
+  background-color: var(--bg-other);
+  font-size: 20pt;
+}
+
+.loginInput {
+  display: block;
+  border-radius: 0;
+  font-size: 15pt;
+  margin: 5px 0 5px 0;
+}
+
+.card {
+  margin: 0 15% 5% 15%;
 }

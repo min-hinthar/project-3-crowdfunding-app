@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useQuery } from '@apollo/client';
 
 import Projects from '../components/Projects';
@@ -13,12 +14,11 @@ const Profile = () => {
   const { loading, data } = useQuery(QUERY_USER, {
     variables: { email: Auth.getProfile().data.email },
   });
-  console.log (data)
-  console.log (Auth.getProfile())
 
   if (loading) return 'Loading...';
   const user = data?.getUser || [];
-  
+
+  console.log(data)
 
 
   return (
@@ -27,10 +27,9 @@ const Profile = () => {
         <h2 className="profileCard">
           Viewing {user.email} profile.
         </h2>
-        {/* <p><SingleProject /></p> */}
+        <p><SingleProject /></p>
       
-
-        {/* <Projects /> */}
+          <div><Projects /></div>
 
       </div>
     </div>
