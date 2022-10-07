@@ -11,7 +11,7 @@
     "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
-    "server": "NODE_ENV=production && MONGODB_URI=mongodb+srv://admin:15011Badillo@cluster0.0p0o2by.mongodb.net/?retryWrites=true&w=majority && cd server && npm run start"
+    "server": "cd server && npm run start"
   },
   "repository": {
     "type": "git",
