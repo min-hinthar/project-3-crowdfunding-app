@@ -4,9 +4,19 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
-import Projects from '../components/Projects';
+import Projects from './Projects';
 
 
+// import checkout form for Stripe
+import CheckoutForm from './CheckoutForm';
+
+// importing Stripe React elements modules
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+import publishableKey from '../.env';
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+const stripePromise = loadStripe(publishableKey);
 
 
 const Profile = () => {
@@ -15,6 +25,11 @@ const Profile = () => {
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME);
 
   const user = data?.me || data?.user || {};
+
+  const options = {
+    // passing the client secret obtained from the server
+    clientSecret: '{{CLIENT_SECRET}}',
+  };
 
   // const users = data?.user || [];
   if (!loading)
@@ -35,7 +50,9 @@ const Profile = () => {
       </div>
 
       <Projects />
-
+      <Elements stripe={stripePromise} options={options}>
+      <CheckoutForm />
+    </Elements>
     </div>
     );
   };
