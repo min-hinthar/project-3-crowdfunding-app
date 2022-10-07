@@ -4,7 +4,7 @@ function Home() {
   return (
     <section className="sectionHome">
       <img className="summaryContainer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/1280px-Flag_of_Myanmar.svg.png" alt="burmaflag" width="500" height="320"></img>
-      <div classname="summaryContainer">
+      <div>
         <div className="summaryBox">
           <h1 className="homeTitle">Burma Freedom Fund (BFF)</h1>
           <p>

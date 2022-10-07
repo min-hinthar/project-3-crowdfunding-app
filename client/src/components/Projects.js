@@ -3,18 +3,35 @@ import { QUERY_PROJECTS } from '../utils/queries';
 import { useQuery } from '@apollo/client';
 
 
-
 const Projects = () => {
   const { loading, data } = useQuery(QUERY_PROJECTS);
-  const projects = data?.projects || [];
-  console.log(projects)
-  
-  
+  if (loading) return 'Loading...';
+
+  console.log(data)
+
+  const projects = data?.getProjects || [];
+
   return (
     <div>
-      <h3 className="text-primary">View All Projects</h3>
-      <p>{projects}</p>
+      <div>
+        <h3 className="text-primary">View All Projects</h3>
+        <div>
+          {projects.map(
+            (project) => {
+              return (
+                <li>
+                  {project.name}
+                </li>
+              );
+            }
+          )
+          }
+        </div>
+      </div>
+
     </div>
-    );
-  };
-  export default Projects;
+  );
+
+}
+
+export default Projects;
