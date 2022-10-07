@@ -15,6 +15,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   min-height: 100vh;
+  background-image: url("https://givebutter.s3.amazonaws.com/media/u2slqGiD3eXpjEKmXOiLpBd5WXBPVlq4WVE3tNyb.jpg");
 }
 
 .footerText {
@@ -35,8 +36,14 @@
   margin-right: auto;
 }
 
+.container{
+  background-image: radial-gradient(rgb(255, 0, 0), rgb(255, 145, 0), rgb(251, 255, 0));
+  margin-bottom: 1rem;
+}
+
 .mainHeader, .mainFooter {
-  background-color: var(--bg-header);
+  /* background-color: var(--bg-header); */
+  background-image: linear-gradient(to bottom, rgb(198, 0, 0), rgb(255, 0, 0), rgb(255, 157, 0));
   color: var(--text-light);
   margin-bottom: 1.375rem;
   padding-top: 1rem;
@@ -46,6 +53,7 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
 
 .studentName {
   margin: 0;
@@ -73,6 +81,8 @@
 
 .headerName{
   margin: 0;
+  font-family: fantasy;
+  font-stretch: expanded;
 }
 
 .linkContainer {

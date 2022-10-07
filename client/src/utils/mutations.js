@@ -25,13 +25,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_PROJECT = gql`
-  mutation addProject($name: String!, $description: String!, $pledgeGoal: Int!, $createdAt: String!) {
-    addProject(name: $name) {
+  mutation addProject($name: String!, $description: String!, $pledgeGoal: Int!, $projectManager: String!) {
+    addProject(name: $name, description: $description, pledgeGoal: $pledgeGoal, projectManager: $projectManager) {
       _id
       name
       description
       pledgeGoal
-      createdAt
       assets {
         _id
         title
@@ -44,8 +43,8 @@ export const ADD_PROJECT = gql`
 `;
 
 export const REMOVE_PROJECT = gql`
-mutation removeProject($name: String!, $description: String!, $pledgeGoal: Int!, $createdAt: String!) {
-  removeProject(name: $name) {
+mutation removeProject($projectId: ID!) {
+  removeProject(projectId: $projectId) {
     _id
     name
     description
@@ -63,8 +62,8 @@ mutation removeProject($name: String!, $description: String!, $pledgeGoal: Int!,
 `;
 
 export const ADD_ASSET = gql`
-  mutation addAsset ($title: String!, $description: String!, $createdAt: String!) {
-    addAsset(title: $title, description: $description, price: $price, createdAt: $createdAt) {
+  mutation addAsset ($title: String!, $description: String!, $price: Int!) {
+    addAsset(title: $title, description: $description, price: $price) {
       _id
       title
       description
