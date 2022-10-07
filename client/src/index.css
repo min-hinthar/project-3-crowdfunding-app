@@ -1,13 +1,158 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: sans-serif;
+}
+:root {
+  --bg-header: #cfebc1;
+  --text-light: #69581a;
+  --btn-color: white;
+  --bg-page: #f8f3dd;
+  --bg-other: #69581a9d;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-image: url("https://givebutter.s3.amazonaws.com/media/u2slqGiD3eXpjEKmXOiLpBd5WXBPVlq4WVE3tNyb.jpg");
+}
+
+.footerText {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container, .headerContainer {
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container{
+  background-image: radial-gradient(rgb(255, 0, 0), rgb(255, 145, 0), rgb(251, 255, 0));
+  margin-bottom: 1rem;
+}
+
+.mainHeader, .mainFooter {
+  /* background-color: var(--bg-header); */
+  background-image: linear-gradient(to bottom, rgb(198, 0, 0), rgb(255, 0, 0), rgb(255, 157, 0));
+  color: var(--text-light);
+  margin-bottom: 1.375rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.studentName {
+  margin: 0;
+  text-align: center;
+}
+
+.gitHub {
+  color: var(--btn-color);
+  text-decoration: none;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerTitle {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.headerName{
+  margin: 0;
+  font-family: fantasy;
+  font-stretch: expanded;
+}
+
+.linkContainer {
+  margin-left: 50%;
+}
+
+.profileLink, .loginBtn {
+  text-align: center;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin: 0.625rem; 
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  outline: none;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  padding: 0.8rem 1.4rem;
+  background-color: var(--btn-color);
+  color: var(--text-light);
+}
+
+.logoutBtn, .signupBtn {
+  text-align: center;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin: 0.625rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  outline: none;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  padding: 0.8rem 1.4rem;
+  background-color: var(--btn-color);
+  color: var(--text-light);
+
+}
+
+.homeTitle {
+  font-style: italic;
+}
+
+.sectionHome {
+  margin: 0 5% 5% 5%;
+  display: inline-block;
+}
+
+.summaryContainer {
+   float: left;
+   padding: 3%;
+}
+
+.summaryBox {
+  margin-top: 6%;
+}
+
+.loginHeader {
+  padding: 0.375rem;
+  background-color: var(--bg-other);
+  font-size: 20pt;
+}
+
+.loginInput {
+  display: block;
+  border-radius: 0;
+  font-size: 15pt;
+  margin: 5px 0 5px 0;
+}
+
+.card {
+  margin: 0 15% 5% 15%;
 }

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Project SkyWalk",
+        "description": "For purhcase of surveillance equipment",
+        "pledgeGoal": 2500
+    },
+    {
+        "name": "Ammunition Funds",
+        "description": "Funds for batallion 1 ammunition",
+        "pledgeGoal": 6000
+    },
+    {
+        "name": "Free protestors",
+        "description": "bail to free protestors",
+        "pledgeGoal": 7500
+      }
+]
