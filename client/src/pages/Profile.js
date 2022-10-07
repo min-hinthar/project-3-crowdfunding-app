@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 
 import Projects from '../components/Projects';
 import SingleProject from '../components/SingleProject';
+import ProjectForm from '../components/ProjectForm';
 
 import { QUERY_USER } from '../utils/queries';
 
@@ -28,7 +29,7 @@ const Profile = () => {
           Viewing {user.email} profile.
         </h2>
         <p><SingleProject /></p>
-      
+          <div> <ProjectForm /> </div>
           <div><Projects /></div>
 
       </div>
