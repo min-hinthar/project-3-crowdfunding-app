@@ -1,7 +1,11 @@
+* {
+  font-family: sans-serif;
+}
 :root {
-  --bg-primary: #B6A19E;
-  --text-light: white;
-  --btn-color: #1bbc9b;
+  --bg-header: #cfebc1;
+  --text-light: #69581a;
+  --btn-color: white;
+  --bg-page: #fffdf4;
 }
 
 .header {
@@ -12,15 +16,26 @@
   min-height: 100vh;
 }
 
+.footerText {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .container, .headerContainer {
-  width: 85%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.mainHeader {
-  background-color: var(--bg-primary);
+.mainHeader, .mainFooter {
+  background-color: var(--bg-header);
   color: var(--text-light);
   margin-bottom: 1.375rem;
   padding-top: 1rem;
@@ -29,6 +44,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.studentName {
+  margin: 0;
+  text-align: center;
+}
+
+.gitHub {
+  color: var(--btn-color);
+  text-decoration: none;
 }
 
 .headerContainer {
@@ -42,6 +67,15 @@
 
 .headerTitle {
   color: var(--text-light);
+  text-decoration: none;
+}
+
+.headerName{
+  margin: 0;
+}
+
+.linkContainer {
+  margin-left: 50%;
 }
 
 .profileLink, .loginBtn {
@@ -73,6 +107,24 @@
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   padding: 0.8rem 1.4rem;
   background-color: var(--btn-color);
-  color: #1a1a1a;
+  color: var(--text-light);
 
+}
+
+.homeTitle {
+  font-style: italic;
+}
+
+.sectionHome {
+  margin: 0 5% 5% 5%;
+  display: inline-block;
+}
+
+.summaryContainer {
+   float: left;
+   padding: 3%;
+}
+
+.summaryBox {
+  margin-top: 6%;
 }
