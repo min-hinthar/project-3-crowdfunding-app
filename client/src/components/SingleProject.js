@@ -18,12 +18,12 @@ const SingleProject = () => {
   if (loading) return 'Loading...';
 
   console.log(data)
-  const project = data?.getUser || {};
-
+  const user = data?.getUser || {};
+console.log(user);
   return (
     <div>
       <div className="profileContainer">
-        <h2 className="profileCard">{project.name}</h2>
+        <h2 className="profileCard">{user.projects.map(p =><p>{p.name}</p>)}</h2>
       
       {/* ADD_PROJECT */}
       {/* UPDATE_PROJECT */}

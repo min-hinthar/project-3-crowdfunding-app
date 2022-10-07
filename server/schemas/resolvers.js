@@ -5,7 +5,7 @@ const { signToken } = require('../utils/authenticate');
 const resolvers = {
     Query:{
         getUser: async (parent, {email}) => {
-            return User.findOne({email: email});
+            return User.findOne({email: email}).populate({path: "projects", populate: {path: "projectManager", model: "Project"}});
         },        
         getProjects: async (parent,{}) => {
             return Project.find();
