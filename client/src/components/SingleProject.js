@@ -23,8 +23,9 @@ console.log(user);
   return (
     <div>
       <div className="profileContainer">
-        <h2 className="profileCard">{user.projects.map(p =><p>{p.name}</p>)}</h2>
-      
+        <h2 className="profileCard">My Projects</h2>
+        {user.projects.map(p =><h3>{p.name}</h3>)}
+    
       {/* ADD_PROJECT */}
       {/* UPDATE_PROJECT */}
       {/* REMOVE_PROJECT */}
