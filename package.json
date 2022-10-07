@@ -10,7 +10,8 @@
     "seed": "cd server && node seeders/seed.js",
     "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
     "build": "cd client && npm run build",
-    "install": "cd server && npm i && cd ../client && npm i"
+    "install": "cd server && npm i && cd ../client && npm i",
+    "server": "NODE_ENV=production && MONGODB_URI=mongodb+srv://admin:@cluster0.0p0o2by.mongodb.net/?retryWrites=true&w=majority && npm run seed && cd ../server && npm run start"
   },
   "repository": {
     "type": "git",
