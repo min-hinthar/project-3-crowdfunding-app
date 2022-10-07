@@ -9,29 +9,6 @@ import Login from './pages/Login';
 import Profile from './components/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
-// import checkout form for Stripe
-import CheckoutForm from './components/CheckoutForm';
-
-// importing Stripe React elements modules
-import {Elements} from '@stripe/react-stripe-js';
-import {loadStripe} from '@stripe/stripe-js';
-import publishableKey from '../client/src/.env';
-// Make sure to call `loadStripe` outside of a component’s render to avoid
-// recreating the `Stripe` object on every render.
-const stripePromise = loadStripe(publishableKey);
-function App() {
-  const options = {
-    // passing the client secret obtained from the server
-    clientSecret: '{{CLIENT_SECRET}}',
-  };
-  return (
-    <Elements stripe={stripePromise} options={options}>
-      <CheckoutForm />
-    </Elements>
-  );
-};
-
-
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
