@@ -10,18 +10,16 @@ const Header = () => {
   };
   return (
     <header className="mainHeader">
-      <div className="Headercontainer">
+      <div className="headerContainer">
         <div>
           <Link className="headerTitle" to="/">
-            <h1 className="m-0">Crowdfunding</h1>
+            <h1 className="headerName">Burma Freedom Fund</h1>
           </Link>
         </div>
-        <div>
+        <div className="linkContainer">
           {Auth.loggedIn() ? (
             <>
-              <Link className="profileLink" to={"/me/" + Auth.getProfile().data.email}>
-                {Auth.getProfile().data.email}'s profile
-              </Link>
+              <Link className="profileLink" to="me/">My Profile</Link>
               <button className="logoutBtn" onClick={logout}>
                 Logout
               </button>
