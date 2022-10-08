@@ -19,10 +19,10 @@ const Header = () => {
         <div className="linkContainer">
           {Auth.loggedIn() ? (
             <>
-              <Link className="profileLink" to="me/">My Profile</Link>
-              <button className="logoutBtn" to="/" onClick={logout}>
+              <Link className="profileLink" to="/me">My Profile</Link>
+              <Link className="logoutBtn" to="/">
                 Logout
-              </button>
+              </Link>
             </>
           ) : (
             <>
