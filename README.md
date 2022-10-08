@@ -28,11 +28,12 @@ Log-In Page
 -----
 
 ### Installation 
-Run 'npm i' to install all required dependicies for the application. 
+Run 'npm i' to install all required dependencies for the application. 
 
 -----
 
 ### Usage 
+<p>To run the application, run 'npm run seeds' to populate seeded data, to launch run 'npm run develop' to run both the client and server scripts. Otherwise, visit the deployed project linked above to test the applications functionality.</p>
 <b>User Story</b><br>
 <p>As a proponent of the Burmese Revolution, I would like to sign up for an account to raise funds for my cause/project.  Users who would like to support the different causes can sign up for an account to purchase art or simply donate directly.</p>
 
@@ -62,8 +63,6 @@ Run 'npm i' to install all required dependicies for the application.
 
 <li>Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).</li>
 </ul>
-
-
 
 -----
 
