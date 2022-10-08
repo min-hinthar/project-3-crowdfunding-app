@@ -25,9 +25,9 @@ const Profile = () => {
   return (
     <div>
       <div className="profileContainer">
-        <h2 className="profileCard">
-          Viewing {user.email} profile.
-        </h2>
+        <h1 className="profileCard">
+          Viewing {user.email} Profile
+        </h1>
         <p><SingleProject /></p>
           <div> <ProjectForm /> </div>
           <div><Projects /></div>
