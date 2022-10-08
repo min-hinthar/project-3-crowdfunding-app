@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
 import { ADD_PROJECT } from '../utils/mutations';
@@ -15,8 +14,12 @@ const ProjectForm = ({ email }) => {
     event.preventDefault();
 
     try {
-      const data = await addProject({
-        variables: { email, project },
+      const { data } = await addProject({
+        variables: { 
+          email,
+          // description, 
+          // pledgeGoal, 
+          projectManager: Auth.getProfile().data.email},
       });
 
       setProject('');
@@ -33,12 +36,26 @@ const ProjectForm = ({ email }) => {
           onSubmit={handleFormSubmit}
         >
           <div className="col-12 col-lg-9">
+            <h4>Add a Project</h4>
             <input
-              placeholder="Add Project"
-              value={project}
+              placeholder="Add Project Name"
+              value={project.name}
               className="form-input w-100"
               onChange={(event) => setProject(event.target.value)}
             />
+            <input
+              placeholder="Add Project Description"
+              value={project.description}
+              className="form-input w-100"
+              onChange={(event) => setProject(event.target.value)}
+            />
+            <input
+              placeholder="Pledge Goal"
+              value={project.pledgeGoal}
+              className="form-input w-100"
+              onChange={(event) => setProject(event.target.value)}
+            />
+
           </div>
 
           <div className="col-12 col-lg-3">
@@ -54,8 +71,7 @@ const ProjectForm = ({ email }) => {
         </form>
       ) : (
         <p>
-          You need to be logged in to endorse skills. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          You need to be logged in to endorse skills. 
         </p>
       )}
     </div>
