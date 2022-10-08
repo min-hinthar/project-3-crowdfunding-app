@@ -14,7 +14,7 @@
 -----
 
 ### Description 
- A special concept crowd-funding application that will allow those fighting for the Burmese Revolution to organize funding efforts on a secure platform.  Project organizers will be able to allow users to donate art assets toward their individual causes. 
+ A special concept crowd-funding application that will allow those fighting for the Burmese Revolution to organize funding efforts on a secure platform.  Project organizers will be able to allow users to donate art assets toward their individual causes. Users can also sign up to purchase art in support of the revolution.
 
  Application Main Landing Page
 ![ScreenShot](screenshots/mainlandingpage.png)
