@@ -39,11 +39,11 @@ const Signup = () => {
   };
 
   return (
-    <main className="">
-      <div className="">
-        <div className="card">
-          <h4 className="card-header ">Join Burma Freedom Fund</h4>
-          <div className="">
+    <main className="signupContainer">
+      <div>
+        <div className="signupCard">
+          <h4 className="signupHeader">Join Burma Freedom Fund</h4>
+          <div className="signupBody">
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -52,7 +52,7 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className="signupInput"
                   placeholder="Your username"
                   name="username"
                   type="text"
@@ -60,7 +60,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="signupInput"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -68,7 +68,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="signupInput"
                   placeholder="******"
                   name="password"
                   type="password"
@@ -76,7 +76,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className=""
+                  className="signupBtn"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
