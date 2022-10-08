@@ -14,8 +14,12 @@
 -----
 
 ### Description 
- A special concept crowd-funding application that will allow those fighting for the Burmese Revolution to organize funding efforts on a secure platform.  Project organizers will be able to allow users to donate art assets toward their individual causes.  ]
+ A special concept crowd-funding application that will allow those fighting for the Burmese Revolution to organize funding efforts on a secure platform.  Project organizers will be able to allow users to donate art assets toward their individual causes. 
 
+Project Deployed to Google Cloud: https://robotic-sanctum-364800.uw.r.appspot.com/
+
+GitHub repo: https://github.com/min-hinthar/project-3-crowdfunding-app
+Look
 -----
 
 ### Installation Req
