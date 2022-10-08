@@ -14,44 +14,66 @@
 -----
 
 ### Description 
- A special concept crowd-funding application that will allow those fighting for the Burmese Revolution to organize funding efforts on a secure platform.  Project organizers will be able to allow users to donate art assets toward their individual causes.  ]
+ A special concept crowd-funding application that will allow those fighting for the Burmese Revolution to organize funding efforts on a secure platform.  Project organizers will be able to allow users to donate art assets toward their individual causes. Users can also sign up to purchase art in support of the revolution.
+
+TECHNOLOGIES USED: MongoDB and Mongoose ODM for the database,  React front end, pure CSS for styling, Apollo/GraphQL API with Node.js and Express.js server, User Authentication (JWT)<br>
+
+Project Deployed to Google Cloud: https://robotic-sanctum-364800.uw.r.appspot.com/<br>
+
+GitHub repo: https://github.com/min-hinthar/project-3-crowdfunding-app<br>
+
+ Application Main Landing Page
+![ScreenShot](screenshots/mainlandingpage.png)
+
+Sign-Up Page
+![ScreenShot](screenshots/signuppage.png)
+
+Log-In Page
+![ScreenShot](screenshots/loginpage.png)
+
+Logged-in View (Test Profile: JDoe@testemail.com)
+![ScreenShot](screenshots/loggedinview.png)
+
+
 
 -----
 
-### Installation Req
-Run 'npm i' to install all required dependicies for the application. 
+### Installation 
+Run 'npm i' to install all required dependencies for the application. 
 
 -----
 
 ### Usage 
-User Story
-As a proponent of the Burmese Revolution, I would like to sign up for an account to raise funds for my cause/project.  Users who would like to support the different causes can sign up for an account to purchase art or simply donate directly.
+<p>To run the application, run 'npm run seeds' to populate seeded data, to launch run 'npm run develop' to run both the client and server scripts. Otherwise, visit the deployed project linked above to test the applications functionality.</p>
+<b>User Story</b><br>
+<p>As a proponent of the Burmese Revolution, I would like to sign up for an account to raise funds for my cause/project.  Users who would like to support the different causes can sign up for an account to purchase art or simply donate directly.</p>
 
-Acceptance Criteria
-Use React for the front end.
+<b>Acceptance Criteria</b><br>
+<ul>
+<li>Use React for the front end.</li>
 
-Use GraphQL with a Node.js and Express.js server.
+<li>Use GraphQL with a Node.js and Express.js server.</li>
 
-Use MongoDB and the Mongoose ODM for the database.
+<li>Use MongoDB and the Mongoose ODM for the database.</li>
 
-Use queries and mutations for retrieving, adding, updating, and deleting data.
+<li>Use queries and mutations for retrieving, adding, updating, and deleting data.</li>
 
-Be deployed using Heroku (with data).
+<li>Be deployed using Heroku (with data).</li>
 
-Have a polished UI.
+<li>Have a polished UI.</li>
 
-Be responsive.
+<li>Be responsive.</li>
 
-Be interactive (i.e., accept and respond to user input).
+<li>Be interactive (i.e., accept and respond to user input).</li>
 
-Include authentication (JWT).
+<li>Include authentication (JWT).</li>
 
-Protect sensitive API key information on the server.
+<li>Protect sensitive API key information on the server.</li>
 
-Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, and so on).
+<li>Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, and so on).</li>
 
-Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
+<li>Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).</li>
+</ul>
 
 -----
 
