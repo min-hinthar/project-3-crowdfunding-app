@@ -140,13 +140,16 @@
   margin-top: 6%;
 }
 
-.loginHeader {
+.loginHeader, .signupHeader {
   padding: 0.375rem;
   background-color: var(--bg-other);
   font-size: 20pt;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: center;
 }
 
-.loginInput {
+.loginInput, .signupInput {
   display: block;
   border-radius: 0;
   font-size: 15pt;
@@ -159,4 +162,17 @@
 
 .profileContainer {
   margin: 0 10px 10px 10px;
+}
+
+.loginContainer, .signupContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.375remf
+}
+
+.loginCard, signupCard {
+  margin-bottom: 1rem;
+  padding: 0.375rem;
 }
