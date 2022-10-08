@@ -42,7 +42,7 @@ const Signup = () => {
     <main className="">
       <div className="">
         <div className="card">
-          <h4 className="card-header ">Join "Crowdfunding"</h4>
+          <h4 className="card-header ">Join Burma Freedom Fund</h4>
           <div className="">
             {data ? (
               <p>
