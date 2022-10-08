@@ -25,6 +25,11 @@ Sign-Up Page
 Log-In Page
 ![ScreenShot](screenshots/loginpage.png)
 
+Logged-in View (Test Profile: JDoe@testemail.com)
+![ScreenShot](screenshots/loggedinview.png)
+
+
+
 -----
 
 ### Installation 
