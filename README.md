@@ -16,6 +16,12 @@
 ### Description 
  A special concept crowd-funding application that will allow those fighting for the Burmese Revolution to organize funding efforts on a secure platform.  Project organizers will be able to allow users to donate art assets toward their individual causes. Users can also sign up to purchase art in support of the revolution.
 
+TECHNOLOGIES USED: MongoDB and Mongoose ODM for the database,  React front end, pure CSS for styling, Apollo/GraphQL API with Node.js and Express.js server, User Authentication (JWT)<br>
+
+Project Deployed to Google Cloud: https://robotic-sanctum-364800.uw.r.appspot.com/<br>
+
+GitHub repo: https://github.com/min-hinthar/project-3-crowdfunding-app<br>
+
  Application Main Landing Page
 ![ScreenShot](screenshots/mainlandingpage.png)
 
