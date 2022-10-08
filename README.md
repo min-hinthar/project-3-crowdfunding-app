@@ -16,46 +16,46 @@
 ### Description 
  A special concept crowd-funding application that will allow those fighting for the Burmese Revolution to organize funding efforts on a secure platform.  Project organizers will be able to allow users to donate art assets toward their individual causes. 
 
-Project Deployed to Google Cloud: https://robotic-sanctum-364800.uw.r.appspot.com/
-
+Project Deployed to Google Cloud: https://robotic-sanctum-364800.uw.r.appspot.com/<br><br>
 GitHub repo: https://github.com/min-hinthar/project-3-crowdfunding-app
-Look
+
 -----
 
-### Installation Req
+### Installation 
 Run 'npm i' to install all required dependicies for the application. 
 
 -----
 
 ### Usage 
-User Story
-As a proponent of the Burmese Revolution, I would like to sign up for an account to raise funds for my cause/project.  Users who would like to support the different causes can sign up for an account to purchase art or simply donate directly.
+<b>User Story</b><br>
+<p>As a proponent of the Burmese Revolution, I would like to sign up for an account to raise funds for my cause/project.  Users who would like to support the different causes can sign up for an account to purchase art or simply donate directly.</p>
 
-Acceptance Criteria
-Use React for the front end.
+<b>Acceptance Criteria</b><br>
+<ul>
+<li>Use React for the front end.</li>
 
-Use GraphQL with a Node.js and Express.js server.
+<li>Use GraphQL with a Node.js and Express.js server.</li>
 
-Use MongoDB and the Mongoose ODM for the database.
+<li>Use MongoDB and the Mongoose ODM for the database.</li>
 
-Use queries and mutations for retrieving, adding, updating, and deleting data.
+<li>Use queries and mutations for retrieving, adding, updating, and deleting data.</li>
 
-Be deployed using Heroku (with data).
+<li>Be deployed using Heroku (with data).</li>
 
-Have a polished UI.
+<li>Have a polished UI.</li>
 
-Be responsive.
+<li>Be responsive.</li>
 
-Be interactive (i.e., accept and respond to user input).
+<li>Be interactive (i.e., accept and respond to user input).</li>
 
-Include authentication (JWT).
+<li>Include authentication (JWT).</li>
 
-Protect sensitive API key information on the server.
+<li>Protect sensitive API key information on the server.</li>
 
-Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, and so on).
+<li>Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, and so on).</li>
 
-Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
+<li>Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).</li>
+</ul>
 
 -----
 
